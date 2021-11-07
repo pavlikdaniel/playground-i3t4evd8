@@ -118,11 +118,11 @@ int main() {
 }
 
 ```
-?[Mi az a szétválogatás?]
+?[Mi az a kiválogatás?]
 -[ ] Egyszerű. Be kell járni mindkét tömböt, összehasonlítani az elemeiket és ha nincs egyező, azt egy külön tömbbe rakjuk.
--[x] Amikor a tömbünk T tulajdonságú és nem T tulajdonságú elemeit külön szedjük.
+-[x] Amikor a tömbünk T tulajdonságú elemeit külön szedjük, de a nem T tulajdonságúak nem érdekelnek minket.
 -[ ] Nem tudom!
--[ ] Bejárjuk az egyik tömböt és minden egyes eleménél eldöntjük, hogy a másik tömbben van-e olyan elem. Ha van, akkor egy külön tömbbe tesszük azt.
+-[ ] Amikor a tömbünk T tulajdonságú és nem T tulajdonságú elemeit külön szedjük.
 
 # Nézzük is a metszetet
 Van kettő különböző hosszúságú tömbünk, amik egész számmal vannak feltöltve. Ez tomb_a és tomb_b.
