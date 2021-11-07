@@ -5,9 +5,9 @@ Ez egy online C játszótér, ahol le tudjátok futtatni és szerkeszteni a meg�
 Az alábbiakban megtalálhatjátok a Szétválogatás, Kiválogatás, Metszet és Únió szekciókat, amikben részletesen leírom hogyan is kell őket megírni.
 
 # Válogassunk szét pár dolgot!
-A <b>szétválogatás</b> azt jelenti, hogy egy tömbből a T tulajdonságú elemeket elválasztjuk a nem T tulajdonságúaktól.
+A <b>szétválogatás</b> azt jelenti, hogy egy tömbből <b>a T tulajdonságú elemeket elválasztjuk a nem T tulajdonságúaktól.</b>
 A mi esetünkiben 2 tömbös szétválogatással fogunk foglalkozni.
-A T tulajdonság lehet bármi, pl.: páratlan; nagyobb, mint 4; Osztható 16-al; stb.
+A <b>T tulajdonság</b> lehet bármi, <b>pl.: páratlan; nagyobb, mint 4; Osztható 16-al; stb.</b>
 Az alábbi kód egy szétválogatást mutat be a tomb_a nevű egész számokat tartalmazó tömbünkön. A páros számokat a tomb_paros,
 a páratlanokat pedig a tomb_paratlan nevű tömbbe fogjuk átmásolni.
 
