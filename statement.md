@@ -61,6 +61,8 @@ int main() {
     for(i=0;i<paratlanhossz;i++){
         printf("%d,",tomb_paratlan[i]);
     }
+
+    return 0;
 }
 
 ```
