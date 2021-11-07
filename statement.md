@@ -4,6 +4,59 @@ Ez egy online C játszótér, ahol le tudjátok futtatni és szerkeszteni a meg�
 így teljesen tökéletes tanuláshoz.
 Az alábbiakban megtalálhatjátok a Szétválogatás, Kiválogatás, Metszet és Únió szekciókat, amikben részletesen leírom hogyan is kell őket megírni.
 
+# Válogassunk szét pár dolgot!
+A szétválogatás azt jelenti, hogy egy tömbből a T tulajdonságú elemeket egy külön tömbbe átmásoljuk, a nem T tulajdonságúakat pedig egy másikba.
+A T tulajdonság lehet bármi, pl.: páratlan; nagyobb, mint 4; Osztható 16-al; stb.
+Az alábbi kód egy szétválogatást mutat be a tomb_a nevű egész számokat tartalmazó tömbünkön. A páros számokat a tomb_paros,
+a páratlanokat pedig a tomb_paratlan nevű tömbbe fogjuk átmásolni.
+
+```C runnable
+#include <stdio.h>
+#include <stdlib.h>
+
+#define N 6
+
+int main() {
+    // A kezdeti tömbünk létrehozása
+    int tomb_a[N] = {1,2,3,4,5,7};
+    
+    //Mivel tudjuk, hogy a szétválogatás után egyik tömbünk sem lehet az eredeti tömbnél hosszabb, így ezt a hoszt állítjuk be a páros és páratlan elemeket tartalmazó tömbjeinknek.
+    int tomb_paros[N];
+    int tomb_paratlan[N];
+    int paroshossz = 0;
+    int paratlanhossz = 0;
+
+    // Járjuk be a tömbünket! (Mivel tudjuk a tömb hosszát (N), ezért for ciklussal célszerű ezt megtenni)
+    int i;
+    for(i=0;i<N;i++){
+        
+        //A tömb i-dik eleméről döntsük el, hogy T tulajdonságú-e és ha igen, másoljuk az egyik tömbbe, ha nem, akkor pedig a másikba. Ebben az esetben a T tulajdonság a párosságra vonatkozik.
+        if(tomb_a[i]%2 == 0){
+            //Ebben az esetben páros, tehát a páros tömbünkbe másoljuk, majd a tömbhossz változót 1-el növeljük, hogy tudjuk ebben a tömbben mennyi elem van.
+            tomb_paros[paroshossz] = tomb_a[i];
+            paroshossz++;
+        }else{
+            tomb_paratlan[paratlanhossz] = tomb_a[i];
+            paratlanhossz++;
+        }
+
+    }
+
+    //Hogy meggyőzőjünk a sikeresenen létrehozott metszet tömbünkről, egyszerűen irassuk ki az elemeit
+    printf("A metszet tömbünk elemei: ");
+    for(i=0;i<metszethossz;i++){
+        printf("%d,",tomb_metszet[i]);
+    }
+}
+
+```
+?[Hogyan néznéd meg két tömb metszetét?]
+-[ ] Nem tudom!
+-[ ] Egyszerű. Be kell járni mindkét tömböt, összehasonlítani az elemeiket és ha nincs egyező, azt egy külön tömbbe rakjuk.
+-[] Még egyszerűbb. Használjuk a beépített intersect() függvényt.
+-[x] Bejárjuk az egyik tömböt és minden egyes eleménél eldöntjük, hogy a másik tömbben van-e olyan elem. Ha van, akkor egy külön tömbbe tesszük azt.
+
+
 # Nézzük is a metszetet
 Van kettő különböző hosszúságú tömbünk, amik egész számmal vannak feltöltve. Ez tomb_a és tomb_b.
 Ezeknek szeretnénk megtudni a metszetét, azaz azt, hogy melyik számok azok, amelyek mindkét tömbben megtalálhatóak.
