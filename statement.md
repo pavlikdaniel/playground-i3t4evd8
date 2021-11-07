@@ -6,7 +6,7 @@ Az alábbiakban megtalálhatjátok a Szétválogatás, Kiválogatás, Metszet é
 
 # Válogassunk szét pár dolgot!
 A <b>szétválogatás</b> azt jelenti, hogy egy tömbből <b>a T tulajdonságú elemeket elválasztjuk a nem T tulajdonságúaktól.</b>
-A mi esetünkiben 2 tömbös szétválogatással fogunk foglalkozni.
+A mi esetünkben 2 tömbös szétválogatással fogunk foglalkozni, azaz az egyik tömbbe a T tulajdonságúakat a másikba pedig a nem T tulajdonságú elemeket gyűjtük ki.
 A <b>T tulajdonság</b> lehet bármi, <b>pl.: páratlan; nagyobb, mint 4; Osztható 16-al; stb.</b>
 Az alábbi kód egy szétválogatást mutat be a tomb_a nevű egész számokat tartalmazó tömbünkön. A páros számokat a tomb_paros,
 a páratlanokat pedig a tomb_paratlan nevű tömbbe fogjuk átmásolni.
@@ -22,7 +22,7 @@ int main() {
     int tomb_a[N] = {1,2,3,4,5,7};
     
     //Mivel tudjuk, hogy a szétválogatás után egyik tömbünk sem lehet az eredeti tömbnél hosszabb,
-    //így ezt a hoszt állítjuk be a páros és páratlan elemeket tartalmazó tömbjeinknek.
+    //így ezt a hosszt állítjuk be a páros és páratlan elemeket tartalmazó tömbjeinknek.
     int tomb_paros[N];
     int tomb_paratlan[N];
     int paroshossz = 0;
@@ -72,6 +72,57 @@ int main() {
 -[ ] Nem tudom!
 -[ ] Bejárjuk az egyik tömböt és minden egyes eleménél eldöntjük, hogy a másik tömbben van-e olyan elem. Ha van, akkor egy külön tömbbe tesszük azt.
 
+# Válogassunk ki egy tömbből!
+A kiválogatásnak rengeteg módszere van, mi a szétválogatáshoz hasonlót fogjuk megnézni, ugyanis így könnyebb lehet megérteni.
+Lesz egy tömbünk, aminek kiválogatjuk a T tulajdonságú elemeit egy másik tömbbe, viszont itt nem érdekelnek minket a nem T tulajdonságúak.
+Az alábbi példában a negatív előjellel rendelkező elemeket fogjuk kiválogatni.
+
+```C runnable
+#include <stdio.h>
+#include <stdlib.h>
+
+#define N 6
+
+int main() {
+    // A kezdeti tömbünk létrehozása
+    int tomb_a[N] = {-1,2,3,-4,5,-7};
+    
+    //Mivel tudjuk, hogy a kiválogatás után a kiválogatott elemeket tartalmazó tömbünk nem lehet hosszabb az eredeti tömbünknél,
+    //így ezt a hosszt állítjuk be a negatív elemeket tartalmaző tömbünknek.
+    int tomb_negativ[N];
+    int negativhossz = 0;
+
+    // Járjuk be a tömbünket! (Mivel tudjuk a tömb hosszát (N), ezért for ciklussal célszerű ezt megtenni)
+    int i;
+    for(i=0;i<N;i++){
+        
+        //A tömb i-dik eleméről döntsük el, hogy T tulajdonságú-e és ha igen, másoljuk a negativ elemeket tartalmazú tömbbe.
+        //Ebben az esetben a T tulajdonság a negatív előjelre vonatkozik.
+        if(tomb_a[i] < 0){
+
+            //Ebben az esetben teljesül a T tulajdonság, így átmásoljuk a tömbünk i-dik elemét és a negatív számokat tartalmaző tömbünk hosszát 1-el növeljük.
+            tomb_negativ[negativhossz] = tomb_a[i];
+            negativhossz++;
+
+        }
+
+    }
+
+    //Hogy meggyőzőjünk a sikeresenen kiválogatott tömbünkről, irassuk ki az elemeit.
+    printf("Negatív tömb elemei: ");
+    for(i=0;i<negativhossz;i++){
+        printf("%d,",tomb_negativ[i]);
+    }
+
+    return 0;
+}
+
+```
+?[Mi az a szétválogatás?]
+-[ ] Egyszerű. Be kell járni mindkét tömböt, összehasonlítani az elemeiket és ha nincs egyező, azt egy külön tömbbe rakjuk.
+-[x] Amikor a tömbünk T tulajdonságú és nem T tulajdonságú elemeit külön szedjük.
+-[ ] Nem tudom!
+-[ ] Bejárjuk az egyik tömböt és minden egyes eleménél eldöntjük, hogy a másik tömbben van-e olyan elem. Ha van, akkor egy külön tömbbe tesszük azt.
 
 # Nézzük is a metszetet
 Van kettő különböző hosszúságú tömbünk, amik egész számmal vannak feltöltve. Ez tomb_a és tomb_b.
