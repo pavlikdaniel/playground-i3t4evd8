@@ -1,6 +1,7 @@
 # Sziasztok!
 
-Ez egy online C játszótér, ahol le tudjátok futtatni és szerkeszteni a megírt kódokat és még szöveget is tudok mellé írni, így teljesen tökéletes tanuláshoz.
+Ez egy online C játszótér, ahol le tudjátok futtatni és szerkeszteni a megírt kódokat és ellenőrző kérdéseket is tudtok kitölteni,
+így teljesen tökéletes tanuláshoz.
 Az alábbiakban megtalálhatjátok a Szétválogatás, Kiválogatás, Metszet és Únió szekcióak, amikben részletesen leírom hogyan is kell őket megírni.
 
 # Nézzük is a metszetet
