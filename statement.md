@@ -20,8 +20,8 @@ int main() {
     int tomb_a[N] = {1,2,3,4,5,7};
     int tomb_b[M] = {3,5,1,6};
     
-    //Mivel tudjuk, hogy a két tömbnek metszete nem lehet nagyobb, mint a legkisebb tömbb hossza,
-     ezért a kisebb tömbb hosszát adjuk meg a metszetünket tartalmazó tömb hosszának.
+    //Mivel tudjuk, hogy a két tömbnek metszete nem lehet nagyobb, mint a legkisebb tömb hossza,
+     ezért a kisebb tömb hosszát adjuk meg a metszetünket tartalmazó tömb hosszának.
     int O = N;
     if(M<N){
         O = M;
