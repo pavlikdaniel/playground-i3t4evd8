@@ -128,6 +128,8 @@ int main() {
     for(i=0;i<metszethossz;i++){
         printf("%d,",tomb_metszet[i]);
     }
+
+    return 0;
 }
 
 ```
