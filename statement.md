@@ -215,6 +215,7 @@ int main() {
     int uniohossz = 0;
 
     // Elsőnek másoljuk be tomb_b elemeit a tomb_unioba
+    // Figyelem! ha a tömbünk ismétlődő elemeket tartalmaz, akkor ezt máshogy kell elvégezni!
     int i;
     for(i=0;i<M;i++){
         tomb_unio[uniohossz] = tomb_b[i];
