@@ -233,17 +233,17 @@ int main() {
 
             //Ebben az esetben találtunk a tomb_b tömbben tomb_a[i]-vel megegyező elemet (tehát az adott szám megtalálható mindkét tömbben),
             // így azt elhelyezzük a metszet tömbünkben.
-            tomb_metszet[metszethossz] = tomb_a[i];
-            metszethossz++;
+            tomb_unio[uniohossz] = tomb_a[i];
+            uniohossz++;
 
         }
 
     }
 
     //Hogy meggyőzőjünk a sikeresenen létrehozott metszet tömbünkről, egyszerűen irassuk ki az elemeit
-    printf("A metszet tömbünk elemei: ");
-    for(i=0;i<metszethossz;i++){
-        printf("%d,",tomb_metszet[i]);
+    printf("Az Únió tömbünk elemei: ");
+    for(i=0;i<uniohossz;i++){
+        printf("%d,",tomb_unio[i]);
     }
 
     return 0;
