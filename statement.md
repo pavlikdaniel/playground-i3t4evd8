@@ -213,23 +213,29 @@ int main() {
     int tomb_unio[O];
     int uniohossz = 0;
 
-    // Járjuk be elsőnek az egyik tömböt (Mivel tudjuk a tömb hosszát (N), ezért for ciklussal célszerű ezt megtenni)
+    // Elsőnek másoljuk be tomb_b elemeit a tomb_unioba
     int i;
+    for(i=0;i<M;i++){
+        tomb_unio[uniohossz] = tomb_b[i];
+        uniohossz++;
+    }
+
+    // Járjuk be a tomb_a-t (Mivel tudjuk a tömb hosszát (N), ezért for ciklussal célszerű ezt megtenni)
     for(i=0;i<N;i++){
         
-        // Ide lényegében egy "eldöntés tétele" jön, azaz, hogy van-e T tulajdonságú elem a tomb_b tömbünkben.
-        //(A T tulajdonság jelenleg az, hogy egyezik-e a tomb_a i-dik eleme a tomb_b j-dik elemével)
+        // Ide lényegében egy "eldöntés tétele" jön, azaz, hogy van-e T tulajdonságú elem a tomb_unio tömbünkben.
+        //(A T tulajdonság jelenleg az, hogy egyezik-e a tomb_a i-dik eleme a tomb_unio j-dik elemével)
         int j=0;
 
         // Figyeljünk arra, hogy a while-ban a j<M jöjjön első feltételnek, ugyanis a feltételek balról jobbra lesznek kiértékelve,
-        // azaz ha a "tomb_a[i] != tomb_b[j]" lenne az első, akkor a j túlfutása esetén egy memóriaszemetet hasonlítunk össze 
-        // ugyanis a tomb_b-nek a j. eleme már "nem létezik", ha a j nagyobb, mint maga a tömb hossza.
-        while(j<M && tomb_a[i]!=tomb_b[j]){
+        // azaz ha a "tomb_a[i] != tomb_unio[j]" lenne az első, akkor a j túlfutása esetén egy memóriaszemetet hasonlítunk össze 
+        // ugyanis a tomb_unio-nek a j. eleme már "nem létezik", ha a j nagyobb, mint maga a tömb hossza.
+        while(j<M && tomb_a[i]!=tomb_unio[j]){
             j++;
         }
 
-        //Lényegében ebben különbözik az únió a metszettől. Tehát az eldöntésünk nem arra irányul, hogy találtunk-e egyező elemet, hanem arra, hogy nem találtunk, ezért belerakjuk.
-        if(j>M){
+        //Lényegében ebben különbözik az únió a metszettől. Tehát az eldöntésünk nem arra irányul, hogy találtunk-e egyező elemet, hanem arra, hogy nem találunk az únióban, ezért belerakjuk.
+        if(j>=M){
 
             //Ebben az esetben találtunk a tomb_b tömbben tomb_a[i]-vel megegyező elemet (tehát az adott szám megtalálható mindkét tömbben),
             // így azt elhelyezzük a metszet tömbünkben.
