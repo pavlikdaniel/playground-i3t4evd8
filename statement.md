@@ -5,7 +5,7 @@ Ez egy online C játszótér, ahol le tudjátok futtatni és szerkeszteni a meg�
 Az alábbiakban megtalálhatjátok a Szétválogatás, Kiválogatás, Metszet és Únió szekciókat, amikben részletesen leírom hogyan is kell őket megírni.
 <br /><b>Készítette: <a href="https://pavlikdaniel.hu" target="_blank">Pavlik Dániel</a></b>
 
-# Válogassunk szét pár dolgot!
+# 1. Válogassunk szét pár dolgot!
 A <b>szétválogatás</b> azt jelenti, hogy egy tömbből <b>a T tulajdonságú elemeket elválasztjuk a nem T tulajdonságúaktól.</b>
 A mi esetünkben 2 tömbös szétválogatással fogunk foglalkozni, azaz az egyik tömbbe a T tulajdonságúakat a másikba pedig a nem T tulajdonságú elemeket gyűjtük ki.
 A <b>T tulajdonság</b> lehet bármi, <b>pl.: páratlan; nagyobb, mint 4; Osztható 16-al; stb.</b>
@@ -73,7 +73,7 @@ int main() {
 -[ ] Nem tudom!
 -[ ] Bejárjuk az egyik tömböt és minden egyes eleménél eldöntjük, hogy a másik tömbben van-e olyan elem. Ha van, akkor egy külön tömbbe tesszük azt.
 
-# Válogassunk ki egy tömbből!
+# 2. Válogassunk ki egy tömbből!
 A kiválogatásnak rengeteg módszere van, mi a szétválogatáshoz hasonlót fogjuk megnézni, ugyanis így könnyebb lehet megérteni.
 Lesz egy tömbünk, aminek kiválogatjuk a T tulajdonságú elemeit egy másik tömbbe, viszont itt nem érdekelnek minket a nem T tulajdonságúak.
 Az alábbi példában a negatív előjellel rendelkező elemeket fogjuk kiválogatni.
@@ -125,7 +125,7 @@ int main() {
 -[ ] Nem tudom!
 -[ ] Amikor a tömbünk T tulajdonságú és nem T tulajdonságú elemeit külön szedjük.
 
-# Nézzük is a metszetet
+# 3. Nézzük is a metszetet
 Van kettő különböző hosszúságú tömbünk, amik egész számmal vannak feltöltve. Ez tomb_a és tomb_b.
 Ezeknek szeretnénk megtudni a metszetét, azaz azt, hogy melyik számok azok, amelyek mindkét tömbben megtalálhatóak.
 
@@ -191,7 +191,7 @@ int main() {
 -[] Még egyszerűbb. Használjuk a beépített intersect() függvényt.
 -[x] Bejárjuk az egyik tömböt és minden egyes eleménél eldöntjük, hogy a másik tömbben van-e olyan elem. Ha van, akkor egy külön tömbbe tesszük azt. 
 
-# Nézzük két tömb únióját
+# 4. Nézzük két tömb únióját
 Van kettő különböző hosszúságú tömbünk, amik egész számmal vannak feltöltve. Ez tomb_a és tomb_b.
 Ezeknek szeretnénk megtudni az únióját, azaz azt, hogy melyik számok azok, amelyek legalább az egyik tömbben előfordulnak.
 
