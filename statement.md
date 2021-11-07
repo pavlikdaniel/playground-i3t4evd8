@@ -36,25 +36,30 @@ int main() {
             tomb_paros[paroshossz] = tomb_a[i];
             paroshossz++;
         }else{
+            //Ebben az esetben páratlan a tomb_a i-dik eleme, így ennek megfelelően cselekszünk. (További infóért: Lásd páros eset)
             tomb_paratlan[paratlanhossz] = tomb_a[i];
             paratlanhossz++;
         }
 
     }
 
-    //Hogy meggyőzőjünk a sikeresenen létrehozott metszet tömbünkről, egyszerűen irassuk ki az elemeit
-    printf("A metszet tömbünk elemei: ");
-    for(i=0;i<metszethossz;i++){
-        printf("%d,",tomb_metszet[i]);
+    //Hogy meggyőzőjünk a sikeresenen létrehozott tömbjeinkről, irassuk ki az elemeiket.
+    printf("Páros tömb elemei: ");
+    for(i=0;i<paroshossz;i++){
+        printf("%d,",tomb_paros[i]);
+    }
+    printf("\n\nPáratlan tömb elemei: ");
+    for(i=0;i<paratlanhossz;i++){
+        printf("%d,",tomb_paratlan[i]);
     }
 }
 
 ```
-?[Hogyan néznéd meg két tömb metszetét?]
--[ ] Nem tudom!
+?[Mi az a szétválogatás?]
 -[ ] Egyszerű. Be kell járni mindkét tömböt, összehasonlítani az elemeiket és ha nincs egyező, azt egy külön tömbbe rakjuk.
--[] Még egyszerűbb. Használjuk a beépített intersect() függvényt.
--[x] Bejárjuk az egyik tömböt és minden egyes eleménél eldöntjük, hogy a másik tömbben van-e olyan elem. Ha van, akkor egy külön tömbbe tesszük azt.
+-[x] Amikor a tömbünk T tulajdonságú és nem T tulajdonságú elemeit külön tömbökbe kiválogatjuk.
+-[ ] Nem tudom!
+-[ ] Bejárjuk az egyik tömböt és minden egyes eleménél eldöntjük, hogy a másik tömbben van-e olyan elem. Ha van, akkor egy külön tömbbe tesszük azt.
 
 
 # Nézzük is a metszetet
