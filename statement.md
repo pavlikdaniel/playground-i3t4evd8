@@ -234,11 +234,12 @@ int main() {
             j++;
         }
 
-        //Lényegében ebben különbözik az únió a metszettől. Tehát az eldöntésünk nem arra irányul, hogy találtunk-e egyező elemet, hanem arra, hogy nem találunk az únióban, ezért belerakjuk.
+        //Lényegében ebben különbözik az únió a metszettől. Tehát az eldöntésünk nem arra irányul, hogy találtunk-e egyező elemet,
+        //hanem arra, hogy nem találunk az únió tömbben, ezért belerakjuk.
         if(j>=M){
 
             //Ebben az esetben találtunk a tomb_b tömbben tomb_a[i]-vel megegyező elemet (tehát az adott szám megtalálható mindkét tömbben),
-            // így azt elhelyezzük a metszet tömbünkben.
+            // így azt elhelyezzük az únió tömbünkben.
             tomb_unio[uniohossz] = tomb_a[i];
             uniohossz++;
 
