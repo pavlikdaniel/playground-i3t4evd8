@@ -229,7 +229,7 @@ int main() {
         }
 
         //Lényegében ebben különbözik az únió a metszettől. Tehát az eldöntésünk nem arra irányul, hogy találtunk-e egyező elemet, hanem arra, hogy nem találtunk, ezért belerakjuk.
-        if(j<M){
+        if(j>M){
 
             //Ebben az esetben találtunk a tomb_b tömbben tomb_a[i]-vel megegyező elemet (tehát az adott szám megtalálható mindkét tömbben),
             // így azt elhelyezzük a metszet tömbünkben.
