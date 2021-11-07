@@ -5,7 +5,8 @@ Ez egy online C játszótér, ahol le tudjátok futtatni és szerkeszteni a meg�
 Az alábbiakban megtalálhatjátok a Szétválogatás, Kiválogatás, Metszet és Únió szekciókat, amikben részletesen leírom hogyan is kell őket megírni.
 
 # Válogassunk szét pár dolgot!
-A szétválogatás azt jelenti, hogy egy tömbből a T tulajdonságú elemeket egy külön tömbbe átmásoljuk, a nem T tulajdonságúakat pedig egy másikba.
+A szétválogatás azt jelenti, hogy egy tömbből a T tulajdonságú elemeket elválasztjuk a nem T tulajdonságúaktól.
+A mi esetünkiben 2 tömbös szétválogatással fogunk foglalkozni.
 A T tulajdonság lehet bármi, pl.: páratlan; nagyobb, mint 4; Osztható 16-al; stb.
 Az alábbi kód egy szétválogatást mutat be a tomb_a nevű egész számokat tartalmazó tömbünkön. A páros számokat a tomb_paros,
 a páratlanokat pedig a tomb_paratlan nevű tömbbe fogjuk átmásolni.
@@ -20,7 +21,8 @@ int main() {
     // A kezdeti tömbünk létrehozása
     int tomb_a[N] = {1,2,3,4,5,7};
     
-    //Mivel tudjuk, hogy a szétválogatás után egyik tömbünk sem lehet az eredeti tömbnél hosszabb, így ezt a hoszt állítjuk be a páros és páratlan elemeket tartalmazó tömbjeinknek.
+    //Mivel tudjuk, hogy a szétválogatás után egyik tömbünk sem lehet az eredeti tömbnél hosszabb,
+    //így ezt a hoszt állítjuk be a páros és páratlan elemeket tartalmazó tömbjeinknek.
     int tomb_paros[N];
     int tomb_paratlan[N];
     int paroshossz = 0;
@@ -30,15 +32,21 @@ int main() {
     int i;
     for(i=0;i<N;i++){
         
-        //A tömb i-dik eleméről döntsük el, hogy T tulajdonságú-e és ha igen, másoljuk az egyik tömbbe, ha nem, akkor pedig a másikba. Ebben az esetben a T tulajdonság a párosságra vonatkozik.
+        //A tömb i-dik eleméről döntsük el, hogy T tulajdonságú-e és ha igen, másoljuk az egyik tömbbe, ha nem, akkor pedig a másikba.
+        //Ebben az esetben a T tulajdonság a párosságra vonatkozik.
         if(tomb_a[i]%2 == 0){
-            //Ebben az esetben páros, tehát a páros tömbünkbe másoljuk, majd a tömbhossz változót 1-el növeljük, hogy tudjuk ebben a tömbben mennyi elem van.
+
+            //Ebben az esetben páros, tehát a páros tömbünkbe másoljuk, majd a tömbhossz változót 1-el növeljük,
+            //hogy tudjuk ebben a tömbben mennyi elem van.
             tomb_paros[paroshossz] = tomb_a[i];
             paroshossz++;
+
         }else{
+
             //Ebben az esetben páratlan a tomb_a i-dik eleme, így ennek megfelelően cselekszünk. (További infóért: Lásd páros eset)
             tomb_paratlan[paratlanhossz] = tomb_a[i];
             paratlanhossz++;
+
         }
 
     }
@@ -48,6 +56,7 @@ int main() {
     for(i=0;i<paroshossz;i++){
         printf("%d,",tomb_paros[i]);
     }
+
     printf("\n\nPáratlan tömb elemei: ");
     for(i=0;i<paratlanhossz;i++){
         printf("%d,",tomb_paratlan[i]);
@@ -57,7 +66,7 @@ int main() {
 ```
 ?[Mi az a szétválogatás?]
 -[ ] Egyszerű. Be kell járni mindkét tömböt, összehasonlítani az elemeiket és ha nincs egyező, azt egy külön tömbbe rakjuk.
--[x] Amikor a tömbünk T tulajdonságú és nem T tulajdonságú elemeit külön tömbökbe kiválogatjuk.
+-[x] Amikor a tömbünk T tulajdonságú és nem T tulajdonságú elemeit külön szedjük.
 -[ ] Nem tudom!
 -[ ] Bejárjuk az egyik tömböt és minden egyes eleménél eldöntjük, hogy a másik tömbben van-e olyan elem. Ha van, akkor egy külön tömbbe tesszük azt.
 
