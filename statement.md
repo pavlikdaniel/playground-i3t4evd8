@@ -21,7 +21,7 @@ int main() {
     int tomb_b[M] = {3,5,1,6};
     
     //Mivel tudjuk, hogy a két tömbnek metszete nem lehet nagyobb, mint a legkisebb tömb hossza,
-     ezért a kisebb tömb hosszát adjuk meg a metszetünket tartalmazó tömb hosszának.
+    //ezért a kisebb tömb hosszát adjuk meg a metszetünket tartalmazó tömb hosszának.
     int O = N;
     if(M<N){
         O = M;
@@ -37,8 +37,8 @@ int main() {
         int j=0;
 
         // Figyeljünk arra, hogy a while-ban a j<M jöjjön első feltételnek, ugyanis a feltételek balról jobbra lesznek kiértékelve,
-         azaz ha a "tomb_a[i] != tomb_b[j]" lenne az első, akkor a j túlfutása esetén egy memóriaszemetet hasonlítunk össze 
-         ugyanis a tomb_b-nek a j. eleme már "nem létezik", ha a j nagyobb, mint maga a tömb hossza.
+        // azaz ha a "tomb_a[i] != tomb_b[j]" lenne az első, akkor a j túlfutása esetén egy memóriaszemetet hasonlítunk össze 
+        // ugyanis a tomb_b-nek a j. eleme már "nem létezik", ha a j nagyobb, mint maga a tömb hossza.
         while(j<M && tomb_a[i]!=tomb_b[j]){
             j++;
         }
@@ -46,7 +46,7 @@ int main() {
         if(j<M){
 
             //Ebben az esetben találtunk a tomb_b tömbben tomb_a[i]-vel megegyező elemet (tehát az adott szám megtalálható mindkét tömbben),
-             így azt elhelyezzük a metszet tömbünkben.
+            // így azt elhelyezzük a metszet tömbünkben.
             tomb_metszet[metszethossz] = tomb_a[i];
             metszethossz++;
 
