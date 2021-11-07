@@ -267,4 +267,4 @@ int main() {
 # Köszönöm, hogy végigolvastad!
 
 Amennyiben elnyerte a tetszésedet ez a kis tanulós doksi, írj egy üzenetet, hogy szeretnél-e még ilyet a későbbiekben, illetve, hogy segített-e a tanulásban.
-<b>Készítette: <a href="https://pavlikdaniel.hu" target="_blank">Pavlik Dániel</a></b>
+<br /><b>Készítette: <a href="https://pavlikdaniel.hu" target="_blank">Pavlik Dániel</a></b>
