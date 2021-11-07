@@ -1,6 +1,6 @@
 # Sziasztok!
 
-Ez egy online C játszótér, ahol le tudjátok futtatni a megírt kódokat és még szöveget is tudok mellé írni, így teljesen tökéletes tanuláshoz.
+Ez egy online C játszótér, ahol le tudjátok futtatni és szerkeszteni a megírt kódokat és még szöveget is tudok mellé írni, így teljesen tökéletes tanuláshoz.
 
 # Nézzük is a metszetet
 Van kettő különböző hosszúságú tömbünk, amik egész számmal vannak feltöltve. Ez tomb_a és tomb_b.
