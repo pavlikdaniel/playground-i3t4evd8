@@ -14,9 +14,11 @@ Ezeknek szeretnénk megtudni a metszetét, azaz azt, hogy melyik számok azok, a
 #define M 4
 
 int main() {
+    ```C runnable
     // A tömbök létrehozása
     int tomb_a[N] = {1,2,3,4,5,7};
     int tomb_b[M] = {3,5,1,6};
+    ```
     
     //Mivel tudjuk, hogy a két tömbnek metszete nem lehet nagyobb, mint a legkisebb tömbb hossza, ezért a kisebb tömbb hosszát adjuk meg a metszetünket tartalmazó tömbb hosszának.
     int O = N;
