@@ -45,8 +45,8 @@ int main() {
     }
 
     //Hogy meggyőzőjünk a sikeresenen létrehozott metszet tömbünkről, egyszerűen irassuk ki az elemeit
+    printf("A metszet tömbünk elemei: ");
     for(i=0;i<metszethossz;i++){
-        printf("A metszet tömbünk elemei: ");
         printf("%d,",tomb_metszet[i]);
     }
 }
