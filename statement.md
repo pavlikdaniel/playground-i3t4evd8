@@ -14,13 +14,12 @@ Ezeknek szeretnénk megtudni a metszetét, azaz azt, hogy melyik számok azok, a
 #define M 4
 
 int main() {
-    ```C runnable
     // A tömbök létrehozása
     int tomb_a[N] = {1,2,3,4,5,7};
     int tomb_b[M] = {3,5,1,6};
-    ```
     
-    //Mivel tudjuk, hogy a két tömbnek metszete nem lehet nagyobb, mint a legkisebb tömbb hossza, ezért a kisebb tömbb hosszát adjuk meg a metszetünket tartalmazó tömbb hosszának.
+    //Mivel tudjuk, hogy a két tömbnek metszete nem lehet nagyobb, mint a legkisebb tömbb hossza,
+     ezért a kisebb tömbb hosszát adjuk meg a metszetünket tartalmazó tömb hosszának.
     int O = N;
     if(M<N){
         O = M;
@@ -34,14 +33,21 @@ int main() {
         
         // Ide lényegében egy "eldöntés tétele" jön, azaz, hogy van-e T tulajdonságú elem a tomb_b tömbünkben. (A T tulajdonság jelenleg az, hogy egyezik-e a tomb_a i-dik eleme a tomb_b j-dik elemével)
         int j=0;
-        // Figyeljünk arra, hogy a while-ban a j<M jöjjön első feltételnek
+
+        // Figyeljünk arra, hogy a while-ban a j<M jöjjön első feltételnek, ugyanis a feltételek balról jobbra lesznek kiértékelve,
+         azaz ha a "tomb_a[i] != tomb_b[j]" lenne az első, akkor a j túlfutása esetén egy memóriaszemetet hasonlítunk össze 
+         ugyanis a tomb_b-nek a j. eleme már "nem létezik", ha a j nagyobb, mint maga a tömb hossza.
         while(j<M && tomb_a[i]!=tomb_b[j]){
             j++;
         }
+        
         if(j<M){
-            //Ebben az esetben találtunk a tomb_b tömbben tomb_a[i]-vel megegyező elemet (tehát az adott szám megtalálható mindkét tömbben), így azt elhelyezzük a metszet tömbünkben.
+
+            //Ebben az esetben találtunk a tomb_b tömbben tomb_a[i]-vel megegyező elemet (tehát az adott szám megtalálható mindkét tömbben),
+             így azt elhelyezzük a metszet tömbünkben.
             tomb_metszet[metszethossz] = tomb_a[i];
             metszethossz++;
+
         }
 
     }
