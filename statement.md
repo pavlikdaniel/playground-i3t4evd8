@@ -1,7 +1,7 @@
 # Sziasztok!
 
 Ez egy online C játszótér, ahol le tudjátok futtatni és szerkeszteni a megírt kódokat és még szöveget is tudok mellé írni, így teljesen tökéletes tanuláshoz.
-
+::: Metszet
 # Nézzük is a metszetet
 Van kettő különböző hosszúságú tömbünk, amik egész számmal vannak feltöltve. Ez tomb_a és tomb_b.
 Ezeknek szeretnénk megtudni a metszetét, azaz azt, hogy melyik számok azok, amelyek mindkét tömbben megtalálhatóak.
@@ -60,6 +60,7 @@ int main() {
 }
 
 ```
+:::
 
 # Advanced usage
 
