@@ -39,6 +39,7 @@ int main() {
         if(j<M){
             //Ebben az esetben találtunk a tomb_b tömbben tomb_a[i]-vel megegyező elemet (tehát az adott szám megtalálható mindkét tömbben), így azt elhelyezzük a metszet tömbünkben.
             tomb_metszet[metszethossz] = tomb_a[i];
+            metszethossz++;
         }
 
     }
