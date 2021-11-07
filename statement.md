@@ -3,7 +3,7 @@
 Ez egy online C játszótér, ahol le tudjátok futtatni és szerkeszteni a megírt kódokat és ellenőrző kérdéseket is tudtok kitölteni,
 így teljesen tökéletes tanuláshoz.
 Az alábbiakban megtalálhatjátok a Szétválogatás, Kiválogatás, Metszet és Únió szekciókat, amikben részletesen leírom hogyan is kell őket megírni.
-<br /><b>Készítette: <a href="https://pavlikdaniel.hu" target="_blank">Pavlik Dániel</a></b>
+<br /><b>Készítette: <a href="#" target="_blank">Pavlik Dániel</a></b>
 
 # 1. Válogassunk szét pár dolgot!
 A <b>szétválogatás</b> azt jelenti, hogy egy tömbből <b>a T tulajdonságú elemeket elválasztjuk a nem T tulajdonságúaktól.</b>
@@ -268,4 +268,4 @@ int main() {
 # Köszönöm, hogy végigolvastad!
 
 Amennyiben elnyerte a tetszésedet ez a kis tanulós doksi, írj egy üzenetet, hogy szeretnél-e még ilyet a későbbiekben, illetve, hogy segített-e a tanulásban.
-<br /><b>Készítette: <a href="https://pavlikdaniel.hu" target="_blank">Pavlik Dániel</a></b>
+<br /><b>Készítette: <a href="#" target="_blank">Pavlik Dániel</a></b>
