@@ -257,11 +257,11 @@ int main() {
 }
 
 ```
-?[Hogyan néznéd meg két tömb metszetét?]
+?[Hogyan néznéd meg két tömb únióját?]
 -[ ] Nem tudom!
--[ ] Egyszerű. Be kell járni mindkét tömböt, összehasonlítani az elemeiket és ha nincs egyező, azt egy külön tömbbe rakjuk.
--[] Még egyszerűbb. Használjuk a beépített intersect() függvényt.
--[x] Bejárjuk az egyik tömböt és minden egyes eleménél eldöntjük, hogy a másik tömbben van-e olyan elem. Ha van, akkor egy külön tömbbe tesszük azt.
+-[X] Egyszerű. Az egyik tömböt berakjuk az únió tömbünkbe, majd a másik tömbön végigmegyünk és ami nincs benne az únióban, azt belerakjuk.
+-[ ] Még egyszerűbb. Használjuk a beépített intersect() függvényt.
+-[ ] Bejárjuk az egyik tömböt és minden egyes eleménél eldöntjük, hogy a másik tömbben van-e olyan elem. Ha van, akkor egy külön tömbbe tesszük azt.
 
 # Advanced usage
 
