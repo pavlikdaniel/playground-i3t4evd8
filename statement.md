@@ -1,9 +1,8 @@
 # Sziasztok!
 
 Ez egy online C játszótér, ahol le tudjátok futtatni és szerkeszteni a megírt kódokat és még szöveget is tudok mellé írni, így teljesen tökéletes tanuláshoz.
-Az alábbiakban megtalálhatjátok a Szétválogatás, Kiválogatás, Metszet és Únió lenyitható ablakokat, amikben részletesen leírom hogyan is kell őket megírni.
+Az alábbiakban megtalálhatjátok a Szétválogatás, Kiválogatás, Metszet és Únió szekcióak, amikben részletesen leírom hogyan is kell őket megírni.
 
-::: Metszet
 # Nézzük is a metszetet
 Van kettő különböző hosszúságú tömbünk, amik egész számmal vannak feltöltve. Ez tomb_a és tomb_b.
 Ezeknek szeretnénk megtudni a metszetét, azaz azt, hogy melyik számok azok, amelyek mindkét tömbben megtalálhatóak.
@@ -62,7 +61,6 @@ int main() {
 }
 
 ```
-:::
 
 # Advanced usage
 
